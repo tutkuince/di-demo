@@ -6,11 +6,9 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class ConstructorInjectedController {
-
-    @Qualifier("constructorGreetingService")
     private GreetingService greetingService;
 
-    public ConstructorInjectedController(GreetingService greetingService) {
+    public ConstructorInjectedController(@Qualifier("constructorGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
