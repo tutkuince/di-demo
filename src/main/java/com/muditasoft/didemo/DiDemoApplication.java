@@ -7,8 +7,10 @@ import com.muditasoft.didemo.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.muditasoft.didemo.services", "com.muditasoft.didemo.controllers"})
 public class DiDemoApplication {
 
     public static void main(String[] args) {
